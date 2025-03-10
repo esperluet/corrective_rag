@@ -1,0 +1,16 @@
+langgraph
+langsmith
+langchain-ollama
+langchain-community
+tiktoken
+langchainhub
+scikit-learn
+tavily-python
+langchain-nomic
+beautifulsoup4
+langchain-openai
+ipython
+langchain-chroma
+fastapi
+uvicorn
+python-multipart

@@ -1,1 +1,63 @@
+# Python related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
 .env.local
+.venv/
+venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+logs/
+*.log
+debug.log
+
+# IDE Specific
+.vscode/
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python dependency management
+Pipfile
+Pipfile.lock
+
+# Docker
+Dockerfile
+*.dockerignore
+dist/
+build/
+
+# Cloud related
+*.service-account.json
+.cloud/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Database and embeddings
+vector_store/
+db.sqlite3
+chroma_db/
+data/
+
+# FastAPI & CLI generated files
+instance/
+__pycache__/
+
+# Tests & Coverage
+.coverage
+htmlcov/
+*.cover
+.coverage
+
+# Deployment Artifacts
+*.tar.gz
+*.whl
