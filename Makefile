@@ -3,8 +3,8 @@
 # -----------------------------------------------------------------
 # Commandes principales :
 #   make help               : Affiche l'aide
-#   make install            : Installe les dépendances via pipenv
-#   make shell              : Lance un shell pipenv
+#   make install            : Installe les dépendances via pip
+#   make active-venv        : Activate virtual environment
 #   make run-cli            : Lance l'application en CLI
 #   make run-api            : Lance l'application FastAPI
 #   make test               : Exécute la suite de tests
@@ -32,23 +32,29 @@ help:
 	@echo ""
 	@echo "Exemple: make install"
 
-## install : Installe les dépendances via pipenv.
+## install : Installe les dépendances via pip.
 .PHONY: install
 install:
-	@echo "==> Installation des dépendances (pipenv)..."
-	pipenv install
+	@echo "==> Installation des dépendances (pip)..."
+	pip install --no-cache-dir -r requirements.txt
 
-## shell : Lance un shell pipenv pour exécuter des commandes manuelles.
-.PHONY: shell
-shell:
-	@echo "==> Ouverture d'un shell pipenv..."
-	pipenv shell
+## install : Installe les dépendances via pipenv.
+.PHONY: install
+create-venv:
+	@echo "==> Creating virtual environment (pip)..."
+	python -m venv venv
+
+## install : Installe les dépendances via pip.
+.PHONY: install
+activate-venv:
+	@echo "==> Installation des dépendances (pip)..."
+	source ./venv/bin/active
 
 ## run-cli : Lance l'application en CLI.
 .PHONY: run-cli
 run-cli:
 	@echo "==> Lancement de l'application CLI..."
-	pipenv run python cli.py
+	python cli.py
 
 ## run-api : Lance l'application FastAPI.
 .PHONY: run-api
