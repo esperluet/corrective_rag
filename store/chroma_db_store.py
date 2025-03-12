@@ -88,6 +88,5 @@ class ChromaDBStore(BaseStore):
             List[Document]: A list of retrieved documents.
         """
         return self.vector_store.similarity_search_by_vector(
-            embedding=self.embeddings.embed_query(query),
-            k=count
+            embedding=self.embeddings.embed_query(query)
         )

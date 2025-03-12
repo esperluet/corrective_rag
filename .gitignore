@@ -45,7 +45,7 @@ build/
 # Database and embeddings
 vector_store/
 db.sqlite3
-chroma_db/
+chroma_langchain_db/
 data/
 
 # FastAPI & CLI generated files
